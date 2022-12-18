@@ -1,0 +1,136 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/baliga/Development/git_repos/az-static-webapp-angular/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/baliga/Development/git_repos/az-static-webapp-angular/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)@(spec|test).*"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/baliga/Development/git_repos/az-static-webapp-angular/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/baliga/Development/git_repos/az-static-webapp-angular/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)@(spec|test).*"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/baliga/Development/git_repos/az-static-webapp-angular/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/baliga/Development/git_repos/az-static-webapp-angular/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)@(spec|test).*"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "pw-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFolder": "pw-report",
+          "outputFile": "report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "configFile": "/home/baliga/Development/git_repos/az-static-webapp-angular/playwright.config.ts",
+    "rootDir": "/home/baliga/Development/git_repos/az-static-webapp-angular/tests",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.29.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run start",
+      "port": 4200
+    }
+  },
+  "suites": [
+    {
+      "title": "playwright.spec.ts",
+      "file": "playwright.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "basic test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 15,
+                  "error": {
+                    "message": "browserType.launch: Executable doesn't exist at /home/baliga/.cache/ms-playwright/chromium-1040/chrome-linux/chrome\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
+                    "stack": "browserType.launch: Executable doesn't exist at /home/baliga/.cache/ms-playwright/chromium-1040/chrome-linux/chrome\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝\n    at Object.playwrightFixtures.browser.scope [as fn] (/home/baliga/Development/git_repos/az-static-webapp-angular/node_modules/@playwright/test/lib/index.js:180:51)\n    at /home/baliga/Development/git_repos/az-static-webapp-angular/node_modules/@playwright/test/lib/fixtures.js:95:81"
+                  },
+                  "errors": [
+                    {
+                      "message": "browserType.launch: Executable doesn't exist at /home/baliga/.cache/ms-playwright/chromium-1040/chrome-linux/chrome\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝\n\n    at Object.playwrightFixtures.browser.scope [as fn] (/home/baliga/Development/git_repos/az-static-webapp-angular/node_modules/@playwright/test/lib/index.js:180:51)\n    at /home/baliga/Development/git_repos/az-static-webapp-angular/node_modules/@playwright/test/lib/fixtures.js:95:81"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2022-12-18T18:54:00.447Z",
+                  "attachments": []
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "30af7584f0f0ba46938c-4fc3b1eedb43cd97a88f",
+          "file": "playwright.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
