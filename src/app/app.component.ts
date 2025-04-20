@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   template: `<div> {{message}} </div>`,
 })
 export class AppComponent {
-  message = 'Azure Static WebApp';
+  message = 'My Azure Static WebApp';
 
   constructor(private http: HttpClient) {
     this.http.get('/api/message')
-      .subscribe((resp: any) => this.message = resp.text);
+      .subscribe(
+        (resp: any) => this.message = resp.text, // Success callback
+        (error) => console.error('Error:', error), // Error callback
+        () => console.log('Request completed') // Completion callback
+      );
   }
 }
