@@ -1,7 +1,4 @@
 {
-  "navigationFallback": {
-    "rewrite": "/index.html"
-  },
   "auth": {
     "identityProviders": {
       "azureActiveDirectory": {
